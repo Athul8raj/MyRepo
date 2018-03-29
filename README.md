@@ -7,9 +7,9 @@ This project contains Flask microframework based web app with integration to Cel
 
 Database is Postgres.
 
-So this app enables user to register login and review materials on the app(i havent add it yet).User can contribute and when user adds anything it will sent as an email through Celery to my mailbox so that i can approve it.
+So this app enables user to register login and review materials on the app.User can contribute and when user adds anything it will sent as an email through Celery to my mailbox so that i can approve it.
 
-I am trying to come up with a Chat bot for my web app which i will be uploading soon and a rest api endpoint for my app.
+Once the user add a Course URL it will be sent as a mail with the course details to the approver uwho can then add if applicable to the DB.
 
 Shout out to the youtubers that helped me along this development especially Corey Schafer, traversy Media and so many intelligent guys out there and books that i went through to start this app project.
 
