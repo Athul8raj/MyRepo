@@ -17,24 +17,24 @@ app.config.update(
 )
 celery = make_celery(app)
 
-twitter_blueprint = make_twitter_blueprint(api_key='8936qQhpNdPk4Y2fqrtwKhUGM', api_secret='WReogC6o1QQHvTq0gKnS6kxeEyvcQ1ftnpYhz2W80xeajesaoa')
-github_blueprint = make_github_blueprint(client_id='c05abe9e85d2f9744f10', client_secret='059252db01b15e5a576d857fdab0053c74eb0639')
+twitter_blueprint = make_twitter_blueprint(api_key='', api_secret='')
+github_blueprint = make_github_blueprint(client_id='', client_secret='')
 
 app.register_blueprint(twitter_blueprint, url_prefix='/twitter_login')
 app.register_blueprint(github_blueprint, url_prefix='/github_login')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:January@2018@localhost/myFlaskApp'
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 db = SQLAlchemy(app)
 app.secret_key = 'my obvious secret key'
 
-config1 = pdfkit.configuration(wkhtmltopdf='C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe')
+config1 = pdfkit.configuration(wkhtmltopdf='your exe file')
 mail = Mail(app)
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 25
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = 'athul8raj@gmail.com'
-app.config['MAIL_PASSWORD'] = 'October@2017'
+app.config['MAIL_USERNAME'] = ''
+app.config['MAIL_PASSWORD'] = ''
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -87,14 +87,14 @@ def articles():
 def article(id):
     return render_template('article.html', id=id)
 
-#@app.route('/process/<name>')
-#def process(name):
-#	reverse.delay(name)
-#	return 'I sent a Async request'
+@app.route('/process/<name>')
+def process(name):
+	reverse.delay(name)
+	return 'I sent a Async request'
 
-#@celery.task(name='tasks.reverse')
-#def reverse(string):
-#	return string[::-1]
+@celery.task(name='tasks.reverse')
+def reverse(string):
+	return string[::-1]
 	
 @app.route('/<user>/<course>/<url>')
 def send_pdf(user, course, url):
