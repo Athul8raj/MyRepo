@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<html>
+    <head>
+        <title>Plagiarism Defender</title>
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Plagiarism Defender Results</h1>
+            </div>
+            <div id="content">
+                In our best opinion, the text you entered is <strong>{{is_it_plagiarized}}</strong> plagiarized!
+            </div>
+            <BR><BR>
+            <div id="content">
+                Text Entered: <strong>{{text_to_filter}}</strong>
+            </div>
+        </div>
+    </body>
+</html>
+	
+
+{% endblock %}
