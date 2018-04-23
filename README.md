@@ -1,5 +1,5 @@
 # MyRepo
-Here u can find my two Projects that i developed.
+Here u can find my Projects that i developed.
 
 #MyFlaskApp Project
 
@@ -22,4 +22,14 @@ This app provides user to basically register,Login and browse through the variou
 Registrations are provided through Facebook, Google(gmail) and email verification after which the user can login(if authenticated) and view the material inside the app.
 
 I will come up with new ways of making this app user friendly like voice activated buttons like speech recognition ability and so on.
+
+
+#Plagiarism defender and Web scraping App
+
+In myFlask.py , you can find my Anti plagiarism app which you can use to fing the probablility of plagiarism by typing in the text you want to check if it is plagiarised.
+
+I have used the nltk kit to search through the net for the text and if found will tell you the probability.
+(Note: I have used the source code used by Another user and modified on top on that)
+
+Web scraping is done with the Beautiful Soup module.You can type in the url from which you guys want to scrape and the app does the scraping for you .
 
