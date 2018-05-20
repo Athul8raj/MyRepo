@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<form id="uploadbanner" enctype="multipart/form-data" method="post">
+   <label class="btn btn-default btn-file">
+   <input id="fileupload" name="file" type="file"/>
+   <label>
+   <input type="submit" value="Upload" id="submit"  class="btn btn-primary" />
+</form>
+{% endblock %}
