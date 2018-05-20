@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% include 'includes/_messages.html' %}
+
+
+<div class="card">
+	<div class="card-body">
+		<form method='POST' action="">
+	<br>
+			<p class="h4 text-center py-4">Login</p>
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i>
+					<label class="font-weight-light">Username</label>
+					<input type ="text" name="username" class= "form-control" value={{request.form.username}}>
+			</div>
+
+			<div class="md-form">
+				<i class="fa fa-lock prefix grey-text"></i>
+					<label class="font-weight-light">Password</label>
+					<input type ="text" name="password" class= "form-control" value={{request.form.password}}>
+			</div>
+	<br>
+			<div class="text-center py-4 mt-3">
+				<button class="btn btn-primary" type="submit" value="submit">Submit</button>
+			</div>
+
+			<a class="btn btn-block btn-social btn-lg btn-twitter" href="/twitter">
+				<div class="fa fa-twitter"></div> Sign in with Twitter
+			</a>
+
+			<a class="btn btn-block btn-social btn-lg btn-github" href="/github">
+				<div class="fa fa-github"></div> Sign in with Github
+			</a>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
