@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+<html>
+    <head>
+        <title>Plagiarism Defender</title>
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Check Your Text for Plagiarism</h1>
+            </div>
+			<p>Do you want to scrape Anything<a href='/webScraping/'>Click Here</a></p>
+            <div id="content">
+                <form method="post" action="{{ url_for('IsItPlagiarized') }}">
+                  <label for="text_to_check">Enter text to check for plagiarism:</label>
+                  <BR><textarea cols="100" rows="20" name="text_to_check"></textarea>
+                  <div class="text-center py-4 mt-3">
+				<button class="btn btn-primary" type="submit" value="submit">Submit</button>
+                </form>				  
+            </div>
+			
+        </div>
+    </body>
+</html>
+{% endblock %}

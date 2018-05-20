@@ -1,0 +1,47 @@
+{% extends 'layout2.html' %}
+
+{% block body %}
+{% include 'includes/_messages.html' %}
+<h3>Courses</h3>
+<h4>Welcome {{session.username}}</h4>
+<div class="card" style="width: 24rem;height: 25rem;float:left;">
+  <img class="card-img-top" src="static/angular-4-release.jpg">
+  <div class="container">
+  <div class="card-body">
+    <h5 class="card-title">Angular The Complete Guide</h5>
+    <p class="card-text"></p>
+    <a href="https://codingthesmartway.com/courses/angular2-complete-guide/" class="btn btn-primary">Go to Course</a>
+  </div>
+  </div>
+  </div >
+  <div class="card" style="width: 24rem;height: 25rem;float:left;">
+  <img class="card-img-top" src="static/logo-og.png">
+  <div class="container">
+  <div class="card-body">
+    <h5 class="card-title">Modern React With Redux</h5>
+    <p class="card-text"></p>
+    <a href="https://codingthesmartway.com/courses/modern-react-with-redux/" class="btn btn-primary">Go to Course</a>
+  </div>
+  </div>
+  </div>
+  <div class="card" style="width: 24rem;height: 25rem;float:left;">
+  <img class="card-img-top" src="static/VueJs.jpg">
+  <div class="container">
+  <div class="card-body">
+    <h5 class="card-title">Vue.js 2 - The Complete Guide</h5>
+    <p class="card-text"></p>
+    <a href="https://codingthesmartway.com/courses/vuejs2-complete-guide" class="btn btn-primary">Go to Course</a>
+  </div>
+  </div>
+  </div>
+  <div class="card" style="width: 24rem;height: 25rem;">
+  <img class="card-img-top" src="static/Ionic.jpg">
+  <div class="container">
+  <div class="card-body">
+    <h5 class="card-title">Learn Ionic 3 From Scratch</h5>
+    <p class="card-text"></p>
+    <a href="https://codingthesmartway.com/courses/ionic3/" class="btn btn-primary">Go to Course</a>
+  </div>
+  </div>
+  </div>
+{% endblock %}
